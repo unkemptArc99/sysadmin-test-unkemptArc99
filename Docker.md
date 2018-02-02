@@ -20,7 +20,7 @@ I had actually completed the Docker [Getting Started](https://docs.docker.com/ge
 
 I will guide you towards the whole process step-by-step :
 1. Make a new directory for your docker app.
-```
+```s
 $ mkdir Docker
 $ cd Docker
 ```
@@ -42,23 +42,23 @@ CMD ["sh", "testfile.sh"]
 ```
 3. Create the `testfile.sh` that is required for the problem.
 4. Build the docker container into an image.
-```
+```s
 $ docker build -t <any name here. Let's say this name to be imagename>
 ```
 5. Login with your docker cloud credentials. We will then upload this image on the docker cloud so that anyone can run this image.
-```
+```s
 $ docker login
 ```
 6. Tag the image for uploading the image with a registry `username/repository:tag`. This helps for meaningful naming convention.
-```
+```s
 $ docker tag imagename username/repository:tag
 ```
 7. Push the tagged image on your cloud
-```
+```s
 $ docker push username/repository:tag
 ```
 8. Now you can run this image anywhere (Docker must be installed, though) by the following command -
-```
+```s
 $ docker run username/repository:tag
 ```
 
